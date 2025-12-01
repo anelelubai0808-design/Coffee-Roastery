@@ -1,0 +1,111 @@
+<!-- contacts.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee Roastery — Контакты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип кофейни" />
+        <span>Coffee Roastery</span>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="contacts.html" class="active">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contacts">
+        <h1>Контакты</h1>
+        <address>
+          г. Алматы, Алатауский р-н, ул. Кофейная 12<br />
+          Пн–Вс: 09:00–21:00<br />
+          Тел.: +7 (700) 123-45-67<br />
+          Email: hello@roastery.kz
+        </address>
+
+        <div class="map" role="img" aria-label="Карта расположения кофейни">
+          <img src="images/map.jpg" alt="Схема расположения кофейни" />
+        </div>
+      </section>
+
+      <section id="feedback" class="feedback">
+        <h2>Форма обратной связи</h2>
+        <form class="feedback-form" id="feedbackForm">
+          <div class="form-row">
+            <label for="name">Имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Ваше имя"
+            />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="form-row">
+            <label for="topic">Тема</label>
+            <select id="topic" name="topic" required>
+              <option value="order">Заказ</option>
+              <option value="quality">Качество</option>
+              <option value="event">События</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox">
+              <input type="checkbox" id="agree" required />
+              Согласен(на) с обработкой персональных данных
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+            <button type="reset" class="btn btn-outline">Очистить</button>
+          </div>
+
+          <p class="form-note" id="formNote" style="display: none">
+            Спасибо! Мы свяжемся с вами.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav aria-label="Навигация по сайту">
+        <a href="#top">Наверх</a>
+        <a href="contacts.html#feedback">Обратная связь</a>
+      </nav>
+      <p>&copy; <time datetime="2025">2025</time> Coffee Roastery. Алма-Ата.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

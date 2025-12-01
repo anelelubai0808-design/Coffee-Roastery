@@ -1,0 +1,378 @@
+/* styles.css */
+:root {
+  --bg: #0f0f0f;
+  --text: #eaeaea;
+  --muted: #b9b9b9;
+  --primary: #c07a35;
+  --primary-dark: #7a4a1f;
+  --card: #1a1a1a;
+  --accent: #3b2f2f;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #0d0d0d, #1b1b1b);
+  color: var(--text);
+  font-family: "Inter", system-ui, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.2px;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  color: #e19a55;
+}
+a:active {
+  color: var(--primary-dark);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #262626;
+  z-index: 1000;
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-weight: 800;
+}
+
+.site-header .logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0 16px 12px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  background: #262626;
+  transform: translateY(-2px);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 16px;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+.hero-text p {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--primary);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+.btn-outline {
+  background: transparent;
+}
+
+.features,
+.gallery,
+.specials,
+.contacts,
+.feedback,
+.filters,
+.catalog-grid {
+  padding: 24px 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-grid figure {
+  background: var(--card);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.gallery-grid img {
+  width: 100%;
+  display: block;
+}
+.gallery-grid figcaption {
+  padding: 10px;
+  color: var(--muted);
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 14px;
+  position: relative;
+}
+.card .hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.promo {
+  padding: 24px 16px;
+}
+.panel {
+  display: none;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid #2a2a2a;
+}
+.docs-table th,
+.docs-table td {
+  padding: 10px;
+  border-bottom: 1px solid #2a2a2a;
+  text-align: left;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.product {
+  background: var(--card);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+.price {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.feedback-form .form-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  color: var(--text);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.site-footer {
+  margin-top: 24px;
+  padding: 16px;
+  border-top: 1px solid #262626;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-pic {
+  width: 500px;
+  height: auto;
+  object-fit:contain ;
+}
+
+/* Псевдоклассы/элементы */
+.product h2::before {
+  content: "☕ ";
+}
+.product button:hover {
+  background: #d08a45;
+}
+.product button:active {
+  background: var(--primary-dark);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hero .btn-primary {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Медиа-запросы: адаптив 320–1024px */
+@media (max-width: 1024px) {
+  .catalog-grid {
+    
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-3,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .catalog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-3,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .feedback-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Примеры overflow */
+.gallery-grid figure {
+  overflow: hidden;
+}
+.hero-text {
+  overflow: auto;
+  max-height: 220px;
+}
+
+/* Пример display:none (переключаемый блок новостей) */
+.panel[aria-hidden="true"] {
+  display: none;
+}
+.panel[aria-hidden="false"] {
+  display: block;
+}
+
+/* position examples */
+.site-header {
+  position: sticky;
+  top: 0;
+}
+.card .hint {
+  position: absolute;
+}
+
+/* Доп. декоративный фон */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    600px 200px at 80% 0%,
+    rgba(192, 122, 53, 0.15),
+    transparent
+  );
+  z-index: -1;
+}

@@ -1,0 +1,141 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee Roastery — Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип кофейни" />
+        <span>Coffee Roastery</span>
+      </a>
+      <nav class="site-nav" aria-label="Главная навигация">
+        <ul>
+          <li><a href="index.html" class="active">Главная</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#specials">Акции</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <picture>
+          <source srcset="images/hero-large.jpg" media="(min-width: 768px)" />
+          <img src="images/hero-small.jpg" alt="Зерна кофе и свежая чашка" />
+        </picture>
+        <div class="hero-text">
+          <h1>Свежая обжарка каждый день</h1>
+          <p>
+            Мы доставляем зерна <mark>премиум-качества</mark> с обжаркой под
+            твой вкусовой профиль.
+          </p>
+          <a class="btn btn-primary" href="catalog.html">Выбрать кофе</a>
+        </div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <h2 id="features-title">Почему мы</h2>
+        <div class="grid-3">
+          <article>
+            <h3>Трассируемость</h3>
+            <p>
+              Каждая партия имеет историю происхождения и контроля качества.
+            </p>
+          </article>
+          <article>
+            <h3>Обжарка по заказу</h3>
+            <p>Обжариваем в день заказа, чтобы ты получал свежий продукт.</p>
+          </article>
+          <article>
+            <h3>Экологичность</h3>
+            <p>
+              Упаковка из переработанных материалов, нулевая доставка в городе.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Галерея</h2>
+        <div class="gallery-grid">
+          <figure>
+            <img src="img/5 .jpg" alt="Ротационная обжарочная машина" width="300" height="250"/>
+            <figcaption>Равномерная обжарка на барабане</figcaption>
+          </figure>
+          <figure>
+            <img src="img/Latte_art.webp" alt="Латте-арт" width="300" height="250"/>
+            <figcaption>Бариста и латте-арт</figcaption>
+          </figure>
+          <figure>
+            <img src="img/6.jpg" alt="Отборные кофейные зерна" width="300" height="250"/>
+            <figcaption>Отбор и дефектоскопия зерна</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="specials" class="specials" aria-labelledby="specials-title">
+        <h2 id="specials-title">Акции недели</h2>
+        <ul class="cards">
+          <li class="card">
+            <h3>Эфиопия Yirgacheffe</h3>
+            <p>Цветочные ноты, бергамот, жасмин.</p>
+            <p>
+              <strong>−15%</strong> до
+              <time datetime="2025-11-30">30 ноября 2025</time>
+            </p>
+            <meter min="0" max="100" value="70">70/100</meter>
+            <span class="hint">Популярность сорта</span>
+          </li>
+          <li class="card">
+            <h3>Колумбия Supremo</h3>
+            <p>Какао, карамель, орех.</p>
+            <p>
+              <strong>−10%</strong> до
+              <time datetime="2025-12-05">5 декабря 2025</time>
+            </p>
+            <meter min="0" max="100" value="55">55/100</meter>
+            <span class="hint">Популярность сорта</span>
+          </li>
+        </ul>
+        <progress id="roast-progress" value="40" max="100"></progress>
+        <label for="roast-progress" class="hint"
+          >Прогресс обжарки сегодняшней партии</label
+        >
+      </section>
+
+      <aside class="promo">
+        <p>Подпишись на новости и получай свежие скидки.</p>
+        <button class="btn btn-outline" id="toggleNews">
+          Показать новости
+        </button>
+        <div id="newsPanel" class="panel" aria-hidden="true">
+          <ul>
+            <li><a href="#news1">Новый урожай в Бразилии</a></li>
+            <li><a href="#news2">Каппинг-ивент в Алматы</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <nav aria-label="Навигация по сайту">
+        <a href="#top">Наверх</a>
+        <a href="contacts.html#feedback">Обратная связь</a>
+      </nav>
+      <p>&copy; <time datetime="2025">2025</time> Coffee Roastery. Алма-Ата.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

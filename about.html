@@ -1,0 +1,120 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee Roastery — О компании</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип кофейни" />
+        <span>Coffee Roastery</span>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html" class="active">О компании</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="about">
+        <header>
+          <h1>Кто мы</h1>
+          <p>
+            Независимая ремесленная обжарка в Алматы. Работаем прозрачно и
+            честно.
+          </p>
+        </header>
+
+        <section>
+          <h2>Ценности</h2>
+          <ul>
+            <li>
+              <strong>Качество:</strong> источник, обжарка, упаковка — без
+              компромиссов.
+            </li>
+            <li>
+              <strong>Честность:</strong> открытые купажи, публичные каппинги.
+            </li>
+            <li>
+              <strong>Уважение:</strong> фермеры и бариста — партнеры, а не
+              поставщики.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Команда</h2>
+          <div class="team grid-3">
+            <article>
+              <img src="img/7.jpg" alt="Главный обжарщик" class="profile-pic" />
+              <h3>Аман</h3>
+              <p>Отвечает за профили обжарки и контроль качества.</p>
+            </article>
+            <article>
+              <img src="img/8.jpg" alt="Бариста" class="profile-pic" />
+              <h3>Салтанат</h3>
+              <p>Обучает экстракции и альтернативным методам заваривания.</p>
+            </article>
+            <article>
+              <img src="img/9.jpg" alt="Логист" class="profile-pic" />
+              <h3>Ернар</h3>
+              <p>Городская доставка в день заказа.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Документы</h2>
+          <table class="docs-table">
+            <thead>
+              <tr>
+                <th>Документ</th>
+                <th>Номер</th>
+                <th>Статус</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Сертификат качества</td>
+                <td>Q-2025-11</td>
+                <td>Действует</td>
+              </tr>
+              <tr>
+                <td>Санитарный контроль</td>
+                <td>S-9982</td>
+                <td>Действует</td>
+              </tr>
+              <tr>
+                <td>Декларация происхождения</td>
+                <td>D-5521</td>
+                <td>Действует</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <nav aria-label="Навигация по сайту">
+        <a href="#top">Наверх</a>
+        <a href="contacts.html#feedback">Обратная связь</a>
+      </nav>
+      <p>&copy; <time datetime="2025">2025</time> Coffee Roastery. Алма-Ата.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

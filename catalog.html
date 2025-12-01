@@ -1,0 +1,103 @@
+<!-- catalog.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee Roastery — Каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип кофейни" />
+        <span>Coffee Roastery</span>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="catalog.html" class="active">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="filters" aria-labelledby="filters-title">
+        <h1 id="filters-title">Каталог кофе</h1>
+        <form class="filter-form" id="filterForm">
+          <label>
+            Обжарка:
+            <select name="roast" id="roast">
+              <option value="all">Любая</option>
+              <option value="light">Легкая</option>
+              <option value="medium">Средняя</option>
+              <option value="dark">Темная</option>
+            </select>
+          </label>
+          <label>
+            Метод:
+            <select name="method" id="method">
+              <option value="all">Любой</option>
+              <option value="espresso">Эспрессо</option>
+              <option value="filter">Фильтр</option>
+              <option value="turkish">Турка</option>
+            </select>
+          </label>
+          <button type="button" class="btn btn-outline" id="applyFilters">
+            Применить
+          </button>
+        </form>
+      </section>
+
+      <section class="catalog-grid" aria-label="Карточки товаров">
+        <article class="product" data-roast="light" data-method="filter">
+          <img src="img/4.jpg" alt="Эфиопия Yirgacheffe" />
+          <h2>Эфиопия Yirgacheffe</h2>
+          <p>Цветы, цитрус, бергамот</p>
+          <p class="price">4 900 тг</p>
+          <button class="btn btn-primary">В корзину</button>
+        </article>
+
+        <article class="product" data-roast="medium" data-method="espresso">
+          <img src="img/3.jpg" alt="Колумбия Supremo" />
+          <h2>Колумбия Supremo</h2>
+          <p>Какао, карамель, орех</p>
+          <p class="price">5 200 тг</p>
+          <button class="btn btn-primary">В корзину</button>
+        </article>
+
+        <article class="product" data-roast="dark" data-method="turkish">
+          <img src="img/1.jpg" alt="Бразилия Santos" />
+          <h2>Бразилия Santos</h2>
+          <p>Темный шоколад, фундук</p>
+          <p class="price">4 600 тг</p>
+          <button class="btn btn-primary">В корзину</button>
+        </article>
+
+        <article class="product" data-roast="medium" data-method="filter">
+          <img src="img/2.jpg" alt="Гватемала Antigua" />
+          <h2>Гватемала Antigua</h2>
+          <p>Слива, специи, карамель</p>
+          <p class="price">5 400 тг</p>
+          <button class="btn btn-primary">В корзину</button>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav aria-label="Навигация по сайту">
+        <a href="#top">Наверх</a>
+        <a href="contacts.html#feedback">Обратная связь</a>
+      </nav>
+      <p>&copy; <time datetime="2025">2025</time> Coffee Roastery. Алма-Ата.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
