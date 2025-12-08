@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">
+  <rect width="100%" height="100%" fill="#f5efe6"/>
+  <!-- Coffee bean -->
+  <g transform="translate(300,180)">
+    <ellipse cx="0" cy="0" rx="80" ry="110" fill="#4a2c19"/>
+    <path d="M -20 -110 Q 0 -10 -20 110" fill="none" stroke="#f5efe6" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <!-- Text -->
+  <text x="300" y="350" font-family="Arial" font-size="60" fill="#4a2c19" text-anchor="middle" font-weight="bold">
+    COFFEE BEANS
+  </text>
+  <text x="300" y="420" font-family="Arial" font-size="36" fill="#ff6a2d" text-anchor="middle">
+    ORDER ONLINE
+  </text>
+</svg>
